@@ -58,85 +58,87 @@ class _RegisterPageState extends State<RegisterPage> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 30),
-          child: Column(
-            children: [
-              const Text("Register User", style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.w300,
-              ),),
-              const SizedBox(height: 100,),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: TextField(
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    enabled: true,
-                    enabledBorder: OutlineInputBorder(),
-                    labelText: "Name"
-                  ),
-                  controller: nameC,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: TextField(
-                  decoration: const InputDecoration(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const Text("Register User", style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.w300,
+                ),),
+                const SizedBox(height: 100,),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: TextField(
+                    decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       enabled: true,
                       enabledBorder: OutlineInputBorder(),
-                      labelText: "Surname"
+                      labelText: "Name"
+                    ),
+                    controller: nameC,
                   ),
-                  controller: surnameC,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      enabled: true,
-                      enabledBorder: OutlineInputBorder(),
-                      labelText: "Email"
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: TextField(
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        enabled: true,
+                        enabledBorder: OutlineInputBorder(),
+                        labelText: "Surname"
+                    ),
+                    controller: surnameC,
                   ),
-                  controller: emailC,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      enabled: true,
-                      enabledBorder: OutlineInputBorder(),
-                      labelText: "Password"
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: TextField(
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        enabled: true,
+                        enabledBorder: OutlineInputBorder(),
+                        labelText: "Email"
+                    ),
+                    controller: emailC,
                   ),
-                  controller: passwordC,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      enabled: true,
-                      enabledBorder: OutlineInputBorder(),
-                      labelText: "Confirm Password"
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: TextField(
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        enabled: true,
+                        enabledBorder: OutlineInputBorder(),
+                        labelText: "Password"
+                    ),
+                    controller: passwordC,
                   ),
-                  controller: confirmPasswordC,
                 ),
-              ),
-
-              MaterialButton(
-                minWidth: double.infinity,
-                shape: const StadiumBorder(),
-                color: Colors.blueGrey,
-                height: 50,
-                padding: const EdgeInsets.symmetric(horizontal: 30),
-
-                onPressed: () async => await register(),
-                child: const Text("Register"),
-              )
-            ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: TextField(
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        enabled: true,
+                        enabledBorder: OutlineInputBorder(),
+                        labelText: "Confirm Password"
+                    ),
+                    controller: confirmPasswordC,
+                  ),
+                ),
+            
+                MaterialButton(
+                  minWidth: double.infinity,
+                  shape: const StadiumBorder(),
+                  color: Colors.blueGrey,
+                  height: 50,
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+            
+                  onPressed: () async => await register(),
+                  child: const Text("Register"),
+                )
+              ],
+            ),
           ),
         ),
       ),

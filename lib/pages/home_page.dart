@@ -25,9 +25,9 @@ class _HomePageState extends State<HomePage> {
   final remoteConfig = FirebaseRemoteConfig.instance;
 
   Map<String, Color> colors = {
-    "red":Colors.red,
-    "yellow":Colors.yellow,
-    "blue":Colors.blue,
+    "red": Colors.red,
+    "yellow": Colors.yellow,
+    "blue": Colors.blue,
   };
 
   Future<void> fetchData() async {
@@ -51,14 +51,6 @@ class _HomePageState extends State<HomePage> {
     padding = remoteConfig.getDouble("padding");
     borderRadius = remoteConfig.getDouble("borderRadius");
     backColor = remoteConfig.getString("backColor");
-    // colors.forEach((key, value) {
-    //   if(backColor == key){
-    //
-    //     log(backColor);
-    //   }else{
-    //     backColor = "red";
-    //   }
-    // });
 
     log(isAds.toString());
     setState(() {});
@@ -98,7 +90,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4, mainAxisSpacing: 10, crossAxisSpacing: 20, childAspectRatio: 1),
+                  crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 20, childAspectRatio: 0.5),
               itemBuilder: (_, __) {
                 return MainItem(
                   item: listItem[__],
@@ -131,6 +123,7 @@ class _HomePageState extends State<HomePage> {
 class MainItem extends StatelessWidget {
   final Item item;
   final double borderRadius;
+
   const MainItem({super.key, required this.item, required this.borderRadius});
 
   @override
