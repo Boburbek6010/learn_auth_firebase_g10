@@ -29,6 +29,7 @@ dependencies:
 
   # real time database
   firebase_database: ^10.5.7
+  cloud_firestore: ^4.17.5
 
 dev_dependencies:
   flutter_test:
