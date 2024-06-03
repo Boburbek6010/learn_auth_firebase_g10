@@ -27,9 +27,13 @@ dependencies:
   # remote config
   firebase_remote_config: ^4.4.6
 
-  # real time database
+  # database
   firebase_database: ^10.5.7
   cloud_firestore: ^4.17.5
+  firebase_storage: ^11.7.7
+
+  # file picker
+  file_picker: ^8.0.3
 
 dev_dependencies:
   flutter_test:
